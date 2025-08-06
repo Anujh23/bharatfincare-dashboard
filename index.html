@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bharatfincare - Disbursement Dashboard</title>
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <img src="logo-2.png" alt="BharatFincare Logo" style="max-width: 350px; display: block; margin: 30px auto 20px auto;">
+    <div class="container">
+        <section class="combined-target-section">
+            <div class="combined-target-card">
+                <h2 class="combined-title">Disbursement Target</h2>
+                <div class="combined-target-display">
+                    <div class="target-amount">₹9,25,00,000</div>
+                    <div class="target-label">Total Target</div>
+                </div>
+                <div class="combined-current-display">
+                    <div class="current-amount" id="combined-current">₹0</div>
+                    <div class="current-label">Current Disbursed</div>
+                    <div class="to-go-amount" id="combined-to-go"></div>
+                </div>
+                <div class="progress-container">
+                    <div class="progress-bar">
+                        <div class="progress-fill combined-progress" id="combined-progress"></div>
+                    </div>
+                    <div class="progress-percentage" id="combined-percentage">0%</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Team Sections -->
+        <div class="teams-container">
+            <!-- ELI Team Section -->
+            <div class="team-card" data-team="eli">
+                <div class="team-header">
+                    <h3 class="team-name">ELI</h3>
+                    <div class="team-status" id="eli-status"></div>
+                </div>
+                
+                <!-- Disbursement Section -->
+                <div class="metric-section">
+                    <h4>Disbursement</h4>
+                    <div class="metric-display">
+                        <div class="current-value" id="eli-disbursed">₹0</div>
+                        <div class="target-value">Target: ₹4,51,00,000</div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill eli-disbursement-progress" id="eli-disbursement-progress"></div>
+                        </div>
+                        <div class="progress-percentage" id="eli-disbursement-percentage">0%</div>
+                    </div>
+                    <div class="input-group">
+                        <label for="eli-disbursement-input" class="form-label">Enter Disbursed Amount</label>
+                        <input type="text" id="eli-disbursement-input" class="form-control" placeholder="e.g., 3500000" inputmode="numeric">
+                    </div>
+                </div>
+
+                <!-- Collection Section -->
+                <div class="metric-section">
+                    <h4>Collection</h4>
+                    <div class="metric-display">
+                        <div class="current-value" id="eli-collected">₹0</div>
+                        <div class="target-value">Target: ₹4,73,84,311</div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill eli-collection-progress" id="eli-collection-progress"></div>
+                        </div>
+                        <div class="progress-percentage" id="eli-collection-percentage">0%</div>
+                    </div>
+                    <div class="input-group">
+                        <label for="eli-collection-input" class="form-label">Enter Collected Amount</label>
+                        <input type="text" id="eli-collection-input" class="form-control" placeholder="e.g., 4000000" inputmode="numeric">
+                    </div>
+                </div>
+            </div>
+
+            <!-- NBL Team Section -->
+            <div class="team-card" data-team="nbl">
+                <div class="team-header">
+                    <h3 class="team-name">NBL</h3>
+                    <div class="team-status" id="nbl-status"></div>
+                </div>
+                
+                <!-- Disbursement Section -->
+                <div class="metric-section">
+                    <h4>Disbursement</h4>
+                    <div class="metric-display">
+                        <div class="current-value" id="nbl-disbursed">₹0</div>
+                        <div class="target-value">Target: ₹4,75,00,000</div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill nbl-disbursement-progress" id="nbl-disbursement-progress"></div>
+                        </div>
+                        <div class="progress-percentage" id="nbl-disbursement-percentage">0%</div>
+                    </div>
+                    <div class="input-group">
+                        <label for="nbl-disbursement-input" class="form-label">Enter Disbursed Amount</label>
+                        <input type="text" id="nbl-disbursement-input" class="form-control" placeholder="e.g., 3800000" inputmode="numeric">
+                    </div>
+                </div>
+
+                <!-- Collection Section -->
+                <div class="metric-section">
+                    <h4>Collection</h4>
+                    <div class="metric-display">
+                        <div class="current-value" id="nbl-collected">₹0</div>
+                        <div class="target-value">Target: ₹5,33,36,813</div>
+                    </div>
+                    <div class="progress-container">
+                        <div class="progress-bar">
+                            <div class="progress-fill nbl-collection-progress" id="nbl-collection-progress"></div>
+                        </div>
+                        <div class="progress-percentage" id="nbl-collection-percentage">0%</div>
+                    </div>
+                    <div class="input-group">
+                        <label for="nbl-collection-input" class="form-label">Enter Collected Amount</label>
+                        <input type="text" id="nbl-collection-input" class="form-control" placeholder="e.g., 4500000" inputmode="numeric">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Controls Section -->
+        <div class="controls-section">
+            <div class="button-group">
+                <button id="update-btn" class="btn btn--primary btn--lg">
+                    <span class="button-text">Update Dashboard</span>
+                    <span class="loading-spinner hidden"></span>
+                </button>
+                <button id="reset-btn" class="btn btn--outline btn--lg">Reset All</button>
+            </div>
+        </div>
+
+        <!-- Sample Data Section -->
+        <div class="sample-data">
+            <h4>Sample Data</h4>
+            <div class="sample-buttons">
+                <button class="btn btn--sm btn--secondary sample-btn" 
+                        data-eli-disbursed="35000000" data-eli-collected="40000000" 
+                        data-nbl-disbursed="38000000" data-nbl-collected="45000000">Sample 1</button>
+                <button class="btn btn--sm btn--secondary sample-btn" 
+                        data-eli-disbursed="25000000" data-eli-collected="30000000" 
+                        data-nbl-disbursed="20000000" data-nbl-collected="25000000">Sample 2</button>
+                <button class="btn btn--sm btn--secondary sample-btn" 
+                        data-eli-disbursed="44100000" data-eli-collected="47386551" 
+                        data-nbl-disbursed="45100000" data-nbl-collected="53336813">Target Goals</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
