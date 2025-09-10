@@ -1,19 +1,19 @@
 class BharatfincareApp {
     constructor() {
         this.data = {
-            combinedTarget: 95500000, // 9 crore
+            combinedTarget: 95500000,
             teams: {
                 eli: {
                     name: 'ELI',
                     disbursementTarget: 45500000,
-                    collectionTarget: 51989851,
+                    collectionTarget: 46955310,
                     disbursed: 0,
                     collected: 0
                 },
                 nbl: {
                     name: 'NBL',
                     disbursementTarget: 50000000,
-                    collectionTarget: 53336813,
+                    collectionTarget: 51989851,
                     disbursed: 0,
                     collected: 0
                 }
