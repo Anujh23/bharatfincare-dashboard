@@ -3,13 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bharatfincare - Disbursement Dashboard</title>
+    <title>Bharatfincare - Comprehensive Dashboard</title>
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <img src="logo-2.png" alt="BharatFincare Logo" style="max-width: 350px; display: block; margin: 30px auto 20px auto;">
     <div class="container">
+        <!-- Combined Target Section -->
         <section class="combined-target-section">
             <div class="combined-target-card">
                 <h2 class="combined-title">Disbursement Target</h2>
@@ -31,6 +32,28 @@
             </div>
         </section>
 
+        <!-- Summary Section for Fresh Leads and Total Amount -->
+        <section class="summary-section">
+            <div class="summary-cards">
+                <div class="summary-card fresh-leads">
+                    <h3>Fresh Leads Today</h3>
+                    <div class="summary-value" id="total-fresh-leads">0</div>
+                    <div class="summary-breakdown">
+                        <span>ELI: <span id="eli-fresh-summary">0</span></span>
+                        <span>NBL: <span id="nbl-fresh-summary">0</span></span>
+                    </div>
+                </div>
+                <div class="summary-card total-amount">
+                    <h3>Total Amount Today</h3>
+                    <div class="summary-value" id="total-amount-summary">₹0</div>
+                    <div class="summary-breakdown">
+                        <span>ELI: <span id="eli-amount-summary">₹0</span></span>
+                        <span>NBL: <span id="nbl-amount-summary">₹0</span></span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- Team Sections -->
         <div class="teams-container">
             <!-- ELI Team Section -->
@@ -39,7 +62,33 @@
                     <h3 class="team-name">ELI</h3>
                     <div class="team-status" id="eli-status"></div>
                 </div>
-                
+
+                <!-- Fresh Leads -->
+                <div class="metric-section">
+                    <h4>Fresh Leads</h4>
+                    <div class="metric-display">
+                        <div class="current-value" id="eli-fresh-leads">0</div>
+                        <div class="target-value">Today's Count</div>
+                    </div>
+                    <div class="input-group">
+                        <label for="eli-fresh-input" class="form-label">Fresh Leads Count</label>
+                        <input type="number" id="eli-fresh-input" class="form-control" placeholder="e.g., 25" min="0">
+                    </div>
+                </div>
+
+                <!-- Total Amount -->
+                <div class="metric-section">
+                    <h4>Total Amount</h4>
+                    <div class="metric-display">
+                        <div class="current-value" id="eli-total-amount">₹0</div>
+                        <div class="target-value">Today's Total</div>
+                    </div>
+                    <div class="input-group">
+                        <label for="eli-amount-input" class="form-label">Total Amount</label>
+                        <input type="text" id="eli-amount-input" class="form-control" placeholder="e.g., 2500000" inputmode="numeric">
+                    </div>
+                </div>
+
                 <!-- Disbursement Section -->
                 <div class="metric-section">
                     <h4>Disbursement</h4>
@@ -85,7 +134,33 @@
                     <h3 class="team-name">NBL</h3>
                     <div class="team-status" id="nbl-status"></div>
                 </div>
-                
+
+                <!-- Fresh Leads -->
+                <div class="metric-section">
+                    <h4>Fresh Leads</h4>
+                    <div class="metric-display">
+                        <div class="current-value" id="nbl-fresh-leads">0</div>
+                        <div class="target-value">Today's Count</div>
+                    </div>
+                    <div class="input-group">
+                        <label for="nbl-fresh-input" class="form-label">Fresh Leads Count</label>
+                        <input type="number" id="nbl-fresh-input" class="form-control" placeholder="e.g., 30" min="0">
+                    </div>
+                </div>
+
+                <!-- Total Amount -->
+                <div class="metric-section">
+                    <h4>Total Amount</h4>
+                    <div class="metric-display">
+                        <div class="current-value" id="nbl-total-amount">₹0</div>
+                        <div class="target-value">Today's Total</div>
+                    </div>
+                    <div class="input-group">
+                        <label for="nbl-amount-input" class="form-label">Total Amount</label>
+                        <input type="text" id="nbl-amount-input" class="form-control" placeholder="e.g., 3000000" inputmode="numeric">
+                    </div>
+                </div>
+
                 <!-- Disbursement Section -->
                 <div class="metric-section">
                     <h4>Disbursement</h4>
@@ -143,13 +218,19 @@
             <div class="sample-buttons">
                 <button class="btn btn--sm btn--secondary sample-btn" 
                         data-eli-disbursed="35000000" data-eli-collected="40000000" 
-                        data-nbl-disbursed="38000000" data-nbl-collected="45000000">Sample 1</button>
+                        data-nbl-disbursed="38000000" data-nbl-collected="45000000"
+                        data-eli-fresh="25" data-nbl-fresh="30"
+                        data-eli-amount="2500000" data-nbl-amount="3000000">Sample 1</button>
                 <button class="btn btn--sm btn--secondary sample-btn" 
                         data-eli-disbursed="25000000" data-eli-collected="30000000" 
-                        data-nbl-disbursed="20000000" data-nbl-collected="25000000">Sample 2</button>
+                        data-nbl-disbursed="20000000" data-nbl-collected="25000000"
+                        data-eli-fresh="15" data-nbl-fresh="20"
+                        data-eli-amount="1500000" data-nbl-amount="2000000">Sample 2</button>
                 <button class="btn btn--sm btn--secondary sample-btn" 
                         data-eli-disbursed="44100000" data-eli-collected="47386551" 
-                        data-nbl-disbursed="45100000" data-nbl-collected="53336813">Target Goals</button>
+                        data-nbl-disbursed="45100000" data-nbl-collected="53336813"
+                        data-eli-fresh="50" data-nbl-fresh="55"
+                        data-eli-amount="5000000" data-nbl-amount="5500000">Target Goals</button>
             </div>
         </div>
     </div>
