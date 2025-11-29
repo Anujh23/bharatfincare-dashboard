@@ -6,7 +6,7 @@ class BharatfincareApp {
                 eli: {
                     name: 'ELI',
                     disbursementTarget: 42500000,
-                    collectionTarget: 46955310,
+                    collectionTarget: 41496322,
                     disbursed: 0,
                     collected: 0,
                     freshLeads: 0,
@@ -14,8 +14,8 @@ class BharatfincareApp {
                 },
                 nbl: {
                     name: 'NBL',
-                    disbursementTarget: 50000000,
-                    collectionTarget: 51989851,
+                    disbursementTarget: 47500000,
+                    collectionTarget: 54256582,
                     disbursed: 0,
                     collected: 0,
                     freshLeads: 0,
