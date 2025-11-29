@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +8,10 @@
     <link rel="icon" type="image/x-icon" href="favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-    <img src="logo-2.png" alt="BharatFincare Logo" style="max-width: 350px; display: block; margin: 30px auto 20px auto;">
+    <img src="logo-2.png" alt="BharatFincare Logo"
+        style="max-width: 350px; display: block; margin: 30px auto 20px auto;">
     <div class="container">
         <!-- Combined Target Section -->
         <section class="combined-target-section">
@@ -85,7 +88,8 @@
                     </div>
                     <div class="input-group">
                         <label for="eli-amount-input" class="form-label">Total Amount</label>
-                        <input type="text" id="eli-amount-input" class="form-control" placeholder="e.g., 2500000" inputmode="numeric">
+                        <input type="text" id="eli-amount-input" class="form-control" placeholder="e.g., 2500000"
+                            inputmode="numeric">
                     </div>
                 </div>
 
@@ -94,7 +98,7 @@
                     <h4>Disbursement</h4>
                     <div class="metric-display">
                         <div class="current-value" id="eli-disbursed">₹0</div>
-                        <div class="target-value">Target: ₹4,55,00,000</div>
+                        <div class="target-value">Target: ₹4,25,00,000</div>
                     </div>
                     <div class="progress-container">
                         <div class="progress-bar">
@@ -104,7 +108,8 @@
                     </div>
                     <div class="input-group">
                         <label for="eli-disbursement-input" class="form-label">Enter Disbursed Amount</label>
-                        <input type="text" id="eli-disbursement-input" class="form-control" placeholder="e.g., 3500000" inputmode="numeric">
+                        <input type="text" id="eli-disbursement-input" class="form-control" placeholder="e.g., 3500000"
+                            inputmode="numeric">
                     </div>
                 </div>
 
@@ -113,7 +118,7 @@
                     <h4>Collection</h4>
                     <div class="metric-display">
                         <div class="current-value" id="eli-collected">₹0</div>
-                        <div class="target-value">Target: ₹4,69,55,310</div>
+                        <div class="target-value">Target: ₹4,14,96,322</div>
                     </div>
                     <div class="progress-container">
                         <div class="progress-bar">
@@ -123,7 +128,8 @@
                     </div>
                     <div class="input-group">
                         <label for="eli-collection-input" class="form-label">Enter Collected Amount</label>
-                        <input type="text" id="eli-collection-input" class="form-control" placeholder="e.g., 4000000" inputmode="numeric">
+                        <input type="text" id="eli-collection-input" class="form-control" placeholder="e.g., 4000000"
+                            inputmode="numeric">
                     </div>
                 </div>
             </div>
@@ -157,7 +163,8 @@
                     </div>
                     <div class="input-group">
                         <label for="nbl-amount-input" class="form-label">Total Amount</label>
-                        <input type="text" id="nbl-amount-input" class="form-control" placeholder="e.g., 3000000" inputmode="numeric">
+                        <input type="text" id="nbl-amount-input" class="form-control" placeholder="e.g., 3000000"
+                            inputmode="numeric">
                     </div>
                 </div>
 
@@ -166,7 +173,7 @@
                     <h4>Disbursement</h4>
                     <div class="metric-display">
                         <div class="current-value" id="nbl-disbursed">₹0</div>
-                        <div class="target-value">Target: ₹5,00,00,000</div>
+                        <div class="target-value">Target: ₹4,75,00,000</div>
                     </div>
                     <div class="progress-container">
                         <div class="progress-bar">
@@ -176,7 +183,8 @@
                     </div>
                     <div class="input-group">
                         <label for="nbl-disbursement-input" class="form-label">Enter Disbursed Amount</label>
-                        <input type="text" id="nbl-disbursement-input" class="form-control" placeholder="e.g., 3800000" inputmode="numeric">
+                        <input type="text" id="nbl-disbursement-input" class="form-control" placeholder="e.g., 3800000"
+                            inputmode="numeric">
                     </div>
                 </div>
 
@@ -185,7 +193,7 @@
                     <h4>Collection</h4>
                     <div class="metric-display">
                         <div class="current-value" id="nbl-collected">₹0</div>
-                        <div class="target-value">Target: ₹5,19,89,851</div>
+                        <div class="target-value">Target: ₹5,42,56,582</div>
                     </div>
                     <div class="progress-container">
                         <div class="progress-bar">
@@ -195,7 +203,8 @@
                     </div>
                     <div class="input-group">
                         <label for="nbl-collection-input" class="form-label">Enter Collected Amount</label>
-                        <input type="text" id="nbl-collection-input" class="form-control" placeholder="e.g., 4500000" inputmode="numeric">
+                        <input type="text" id="nbl-collection-input" class="form-control" placeholder="e.g., 4500000"
+                            inputmode="numeric">
                     </div>
                 </div>
             </div>
@@ -216,25 +225,23 @@
         <div class="sample-data">
             <h4>Sample Data</h4>
             <div class="sample-buttons">
-                <button class="btn btn--sm btn--secondary sample-btn" 
-                        data-eli-disbursed="35000000" data-eli-collected="40000000" 
-                        data-nbl-disbursed="38000000" data-nbl-collected="45000000"
-                        data-eli-fresh="25" data-nbl-fresh="30"
-                        data-eli-amount="2500000" data-nbl-amount="3000000">Sample 1</button>
-                <button class="btn btn--sm btn--secondary sample-btn" 
-                        data-eli-disbursed="25000000" data-eli-collected="30000000" 
-                        data-nbl-disbursed="20000000" data-nbl-collected="25000000"
-                        data-eli-fresh="15" data-nbl-fresh="20"
-                        data-eli-amount="1500000" data-nbl-amount="2000000">Sample 2</button>
-                <button class="btn btn--sm btn--secondary sample-btn" 
-                        data-eli-disbursed="44100000" data-eli-collected="47386551" 
-                        data-nbl-disbursed="45100000" data-nbl-collected="53336813"
-                        data-eli-fresh="50" data-nbl-fresh="55"
-                        data-eli-amount="5000000" data-nbl-amount="5500000">Target Goals</button>
+                <button class="btn btn--sm btn--secondary sample-btn" data-eli-disbursed="35000000"
+                    data-eli-collected="40000000" data-nbl-disbursed="38000000" data-nbl-collected="45000000"
+                    data-eli-fresh="25" data-nbl-fresh="30" data-eli-amount="2500000" data-nbl-amount="3000000">Sample
+                    1</button>
+                <button class="btn btn--sm btn--secondary sample-btn" data-eli-disbursed="25000000"
+                    data-eli-collected="30000000" data-nbl-disbursed="20000000" data-nbl-collected="25000000"
+                    data-eli-fresh="15" data-nbl-fresh="20" data-eli-amount="1500000" data-nbl-amount="2000000">Sample
+                    2</button>
+                <button class="btn btn--sm btn--secondary sample-btn" data-eli-disbursed="44100000"
+                    data-eli-collected="47386551" data-nbl-disbursed="45100000" data-nbl-collected="53336813"
+                    data-eli-fresh="50" data-nbl-fresh="55" data-eli-amount="5000000" data-nbl-amount="5500000">Target
+                    Goals</button>
             </div>
         </div>
     </div>
 
     <script src="app.js"></script>
 </body>
+
 </html>
