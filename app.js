@@ -1,7 +1,7 @@
 class BharatfincareApp {
     constructor() {
         this.data = {
-            combinedTarget: 95500000,
+            combinedTarget: 90000000,
             teams: {
                 eli: {
                     name: 'ELI',
