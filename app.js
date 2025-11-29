@@ -5,7 +5,7 @@ class BharatfincareApp {
             teams: {
                 eli: {
                     name: 'ELI',
-                    disbursementTarget: 45500000,
+                    disbursementTarget: 42500000,
                     collectionTarget: 46955310,
                     disbursed: 0,
                     collected: 0,
